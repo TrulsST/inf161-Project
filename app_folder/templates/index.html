@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Football Prediction Site</title>
+  </head>
+
+  <body>
+    <div class='login'>
+      <h1>Predict the score between two teams</h1>
+
+      <form action="{{url_for('predict')}}" method='post'>
+    <h4>Insert Teams Here:</h4>
+    <h6>Home Team:</h6>
+	<input type='text' name='Home Team' placeholder='Home Team' required='required' title="Home Team" /> <br>
+    <h6>Away Team:</h6>
+	<input type='text' name='Away Team' placeholder='Away Team' required='required' title="Away Team" /> <br>
+
+	<br>
+
+	<button type='submit' value='Submit'>Predict</button>
+	<button type='reset' value='Reset'>Reset</button>
+      </form>
+
+      <br>
+      {{prediction_text}}
+      
+    </div>
+  </body>
+</html>
